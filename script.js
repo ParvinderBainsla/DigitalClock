@@ -2,10 +2,11 @@ let digitalClock = () => {
 
 	let date = new Date();
 
-	let hours = date.getHours();
+	let hour = date.getHours();
 	let minutes = date.getMinutes();
 	let seconds = date.getSeconds();
-
+	
+	let hours = hour >= 12 ? hour : hour/12 ;
 	let amorpm = hours >= 12 ? 'pm' : 'am';
 
 	document.getElementById("hours").innerHTML = hours;
